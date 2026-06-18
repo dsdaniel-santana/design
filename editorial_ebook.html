@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02 - Design Editorial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="viewer-body">
+
+    <nav class="viewer-nav">
+        <a href="index.html" class="btn-back">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Voltar ao Portfólio
+        </a>
+        <span class="viewer-project-title">Design Editorial</span>
+    </nav>
+
+    <header class="viewer-header">
+        <h2 class="project-main-title">Ebook: As Aventuras do Pinocchio - Carlo Colloddi</h2>
+        <p class="project-description">
+        <strong>Design Editorial Multimeios:</strong> Da concepção impressa à experiência digital.<br> 
+        Provocado a selecionar uma obra de domínio público para este projeto educativo, reconectei-me com memórias de infância para dar vida a este clássico. 
+        </p>
+        <p class="project-description">
+        O desafio consistiu em projetar uma identidade visual versátil e consistente para dois ecossistemas completamente diferentes: o rigor técnico e tátil do livro impresso combinados à fluidez dinâmica e interativa do e-book. 
+        </p>
+        <p class="project-description">
+        Explore as páginas abaixo e veja como o design de tipografia e layout foram adaptados para garantir máxima legibilidade em qualquer formato.
+        </p>
+    </header>
+    
+
+    <main class="viewer-container">
+        <object data="assets/livro_digital_pinocchio.pdf" type="application/pdf" width="100%" height="700px">
+            <iframe src="assets/livro_digital_pinocchio.pdf" width="100%" height="700px" style="border: none;">
+                <p>O seu navegador não suporta a visualização de PDFs integrados. 
+                   <a href="assets/livro_digital_pinocchio.pdf" target="_blank" style="color: var(--accent);">Clique aqui para abrir ou descarregar o PDF</a>.
+                </p>
+            </iframe>
+        </object>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

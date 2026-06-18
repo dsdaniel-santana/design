@@ -79,6 +79,20 @@ body {
     color: var(--text-primary);
 }
 
+/* Ajuste de contraste para links embutidos na introdução do Hero */
+.intro-text a,
+.intro-text strong a {
+    color: var(--accent) !important;
+    text-decoration: underline !important;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease !important;
+}
+
+.intro-text a:hover,
+.intro-text strong a:hover {
+    color: #93c5fd !important;
+}
+
 /* ==========================================================================
    3. INDEX: SISTEMA DE ACCORDION (INTERESSE & DESEJO)
    ========================================================================== */
@@ -312,6 +326,20 @@ body {
     color: var(--text-secondary);
     font-size: 1rem;
     line-height: 1.5;
+}
+
+/* Ajuste de contraste para links dentro das descrições dos projetos */
+.project-description a,
+.project-description strong a {
+    color: var(--accent) !important;
+    text-decoration: underline !important;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease !important;
+}
+
+.project-description a:hover,
+.project-description strong a:hover {
+    color: #93c5fd !important;
 }
 
 /* Moldura/Container do Slider */

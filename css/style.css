@@ -342,7 +342,7 @@ body {
     color: #93c5fd !important;
 }
 
-/* Moldura/Container do Slider */
+/* Moldura/Container do Slider e do Visualizador de PDF */
 .viewer-container {
     width: 100%;
     max-width: 800px;
@@ -354,6 +354,19 @@ body {
     border: 1px solid var(--border);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     position: relative;
+    
+    /* Configuração de correção para rolagem nativa de PDFs no iOS (iPhone) */
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+}
+
+/* Garante o correto dimensionamento e visualização de objetos/iframes embutidos */
+.viewer-container object,
+.viewer-container iframe {
+    width: 100%;
+    height: 700px;
+    border: none;
+    display: block;
 }
 
 /* CRUCIAL: Permite que as setas vazem para fora das bordas da moldura escura */

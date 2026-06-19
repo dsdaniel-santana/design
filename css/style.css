@@ -257,7 +257,7 @@ body {
 }
 
 /* ==========================================================================
-   4. CARDS: VISUALIZADOR DE SLIDES (PÁGINAS IMERSIVAS)
+   4. CARDS: VISUALIZADOR DE SLIDES E COMPONENTES DE AÇÃO
    ========================================================================== */
 .viewer-body {
     display: flex;
@@ -340,6 +340,35 @@ body {
 .project-description a:hover,
 .project-description strong a:hover {
     color: #93c5fd !important;
+}
+
+/* ADICIONADO: Estilização do bloco do botão do PDF */
+.viewer-actions {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.btn-open-pdf {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(56, 189, 248, 0.1);
+    color: var(--accent);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-open-pdf:hover {
+    background-color: rgba(56, 189, 248, 0.2);
+    border-color: var(--accent);
+    color: var(--text-primary);
+    transform: translateY(-1px);
 }
 
 /* Moldura/Container do Slider e do Visualizador de PDF */
@@ -492,6 +521,22 @@ body {
     .viewer-project-title { display: none; }
     .viewer-header { padding: 1rem 1rem 0 1rem; }
     .project-main-title { font-size: 1.75rem; }
+    
+    /* MODIFICADO: Aumenta o botão para toque fácil e ajusta as ações em bloco */
+    .viewer-actions {
+        width: 100%;
+    }
+    .btn-open-pdf {
+        width: 100%;
+        justify-content: center;
+        padding: 0.9rem;
+    }
+
+    /* MODIFICADO: Oculta o contêiner do PDF APENAS se ele contiver um elemento object (evita quebrar as páginas que usam imagem) */
+    .viewer-container:has(object) {
+        display: none !important;
+    }
+    
     .viewer-container { padding: 1rem; margin-bottom: 4.5rem; }
     
     /* No mobile, oculta as setas laterais externas e deixa a navegação por swipe (arrastar com o dedo) */

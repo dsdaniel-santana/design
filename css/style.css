@@ -522,17 +522,38 @@ body {
     .viewer-header { padding: 1rem 1rem 0 1rem; }
     .project-main-title { font-size: 1.75rem; }
     
-    /* MODIFICADO: Aumenta o botão para toque fácil e ajusta as ações em bloco */
+    /* AJUSTE PREMIUM: Botão do PDF com visual robusto e formato pílula no Mobile */
     .viewer-actions {
         width: 100%;
+        margin-top: 1.75rem;
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
     }
+    
     .btn-open-pdf {
         width: 100%;
+        max-width: 400px;
         justify-content: center;
-        padding: 0.9rem;
+        align-items: center;
+        background-color: var(--accent) !important;
+        color: var(--bg-dark) !important;
+        padding: 1rem 1.5rem;
+        border-radius: 50px;
+        border: none !important;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
     }
 
-    /* MODIFICADO: Oculta o contêiner do PDF APENAS se ele contiver um elemento object (evita quebrar as páginas que usam imagem) */
+    .btn-open-pdf svg {
+        width: 20px;
+        height: 20px;
+        stroke: var(--bg-dark) !important;
+    }
+
+    /* Oculta o contêiner do PDF APENAS se ele contiver um elemento object (evita quebrar as páginas que usam imagem) */
     .viewer-container:has(object) {
         display: none !important;
     }
